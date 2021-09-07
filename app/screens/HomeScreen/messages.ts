@@ -19,7 +19,7 @@ export default defineMessages({
   },
   userHomeLabel: {
     id: `${scope}.userHomeLabel`,
-    defaultMessage: 'My Bogo',
+    defaultMessage: 'My Bogo Here',
   },
   profileLabel: {
     id: `${scope}.profileLabel`,
