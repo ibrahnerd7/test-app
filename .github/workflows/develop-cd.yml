@@ -47,7 +47,7 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v1
       with:
-        name: app-release-unsigned.apk
+        name: app-release.apk
         path: android/app/build/outputs/apk/release/
 
     - name: Distribute app via Firebase App Distribution
@@ -60,7 +60,7 @@ jobs:
         yarn global add firebase-tools
         export PATH="$(yarn global bin):$PATH"
         firebase \
-          appdistribution:distribute android/app/build/outputs/apk/release/app-release.apk \
+          appdistribution:distribute android/app/build/outputs/apk/release/app-release-unsigned.apk \
           --app $firebaseAppId \
           --release-notes "$notes" \
           --groups "$firebaseGroups" \
